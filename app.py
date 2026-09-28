@@ -35,9 +35,10 @@ def obter_ip_local():
         s.connect(("8.8.8.8", 80))
         ip_local = s.getsockname()[0]
         s.close()
+        ip_local = "192.168.2.1"
         return ip_local
     except Exception:
-        return "1192.168.1.1"
+        return "192.168.2.1"
     
 
 def pingar_ip(ip_queue, resultados, total_ips, barra_progresso, texto_progresso):
